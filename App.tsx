@@ -11,6 +11,7 @@ import Newsletter from './components/Newsletter';
 import Map from './components/Map';
 import SmoothScroll from './components/SmoothScroll';
 import OnlineTherapy from './components/OnlineTherapy';
+import PresencialTherapy from './components/PresencialTherapy';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Methodology />
         <Services />
         <OnlineTherapy />
+        <PresencialTherapy />
         <Map />
         <Newsletter />
         <Contact />
