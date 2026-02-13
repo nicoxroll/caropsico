@@ -7,6 +7,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 .blob-shape {
   animation: float 10s ease-in-out infinite;
 }
