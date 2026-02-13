@@ -33,7 +33,7 @@ const About: React.FC = () => {
                     <p className="text-sm text-slate-600">Constante actualización académica y profesional.</p>
                   </div>
                   <img 
-                    src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg" 
+                    src="https://images.pexels.com/photos/7034590/pexels-photo-7034590.jpeg" 
                     alt="Psicología" 
                     loading="lazy"
                     width="400"
@@ -43,7 +43,7 @@ const About: React.FC = () => {
                </motion.div>
                <motion.div style={{ y: yCol2 }} className="space-y-4">
                   <img 
-                    src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg" 
+                    src="https://images.pexels.com/photos/7034741/pexels-photo-7034741.jpeg" 
                     alt="Terapia" 
                     loading="lazy"
                     width="400"

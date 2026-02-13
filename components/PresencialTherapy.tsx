@@ -5,7 +5,9 @@ import { motion } from 'framer-motion';
 export default function PresencialTherapy() {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 flex flex-col gap-24">
+        
+        {/* Row 1: Content Left, Image Right */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
           
           <motion.div 
@@ -17,12 +19,12 @@ export default function PresencialTherapy() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
-                src="/og-image.jpg" 
+                src="https://images.pexels.com/photos/11542627/pexels-photo-11542627.jpeg" 
                 alt="Consultorio Psicológico Presencial en La Plata" 
                 loading="lazy"
                 width="800"
                 height="600"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[400px] lg:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <div className="absolute bottom-8 right-8 text-white text-right">
@@ -47,12 +49,44 @@ export default function PresencialTherapy() {
             <p className="text-slate-600 mb-8 leading-relaxed text-lg">
               Un espacio pensado para tu comodidad y tranquilidad. El ambiente físico es parte fundamental de la terapia, por eso he cuidado cada detalle para que te sientas como en casa desde el primer momento.
             </p>
+          </motion.div>
 
-            <div className="grid sm:grid-cols-2 gap-6 mb-8">
-              <Feature icon={<Wind className="w-5 h-5 text-primary-500" />} title="Ambiente Climatizado" desc="Temperatura ideal en verano e invierno." />
-              <Feature icon={<Flower2 className="w-5 h-5 text-primary-500" />} title="Aromaterapia" desc="Esencias y sahumerios para la calma." />
-              <Feature icon={<Coffee className="w-5 h-5 text-primary-500" />} title="Café o Té de cortesía" desc="Disfrutá de una bebida caliente." />
-              <Feature icon={<Armchair className="w-5 h-5 text-primary-500" />} title="Máximo Confort" desc="Mobiliario cómodo y baño privado." />
+        </div>
+
+        {/* Row 2: Image Left, Features Right */}
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full lg:w-1/2"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+               <img 
+                 src="https://images.pexels.com/photos/7034447/pexels-photo-7034447.jpeg"
+                 alt="Detalle del consultorio"
+                 loading="lazy"
+                 width="800"
+                 height="600"
+                 className="w-full h-[400px] lg:h-[500px] object-cover" 
+                />
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full lg:w-1/2"
+          >
+            <div className="grid sm:grid-cols-2 gap-8 mb-8">
+              <Feature icon={<Wind className="w-6 h-6 text-primary-500" />} title="Ambiente Climatizado" desc="Temperatura ideal en verano e invierno." />
+              <Feature icon={<Flower2 className="w-6 h-6 text-primary-500" />} title="Aromaterapia" desc="Esencias y sahumerios para la calma." />
+              <Feature icon={<Coffee className="w-6 h-6 text-primary-500" />} title="Café o Té de cortesía" desc="Disfrutá de una bebida caliente." />
+              <Feature icon={<Armchair className="w-6 h-6 text-primary-500" />} title="Máximo Confort" desc="Mobiliario cómodo y baño privado." />
             </div>
 
             <a 
@@ -66,6 +100,7 @@ export default function PresencialTherapy() {
           </motion.div>
 
         </div>
+
       </div>
     </section>
   );

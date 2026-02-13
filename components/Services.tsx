@@ -6,7 +6,7 @@ const services: (ServiceItem & { image: string })[] = [
   {
     title: "Ansiedad y Estrés",
     description: "Recupera la calma y el control de tu vida.",
-    image: "https://images.unsplash.com/photo-1516726817505-f5ed825624d8?q=80&w=1974&auto=format&fit=crop"
+    image: "https://images.pexels.com/photos/6951509/pexels-photo-6951509.jpeg"
   },
   {
     title: "Depresión",
@@ -16,7 +16,7 @@ const services: (ServiceItem & { image: string })[] = [
   {
     title: "Autoestima",
     description: "Fortalece tu seguridad y aprende a quererte.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+    image: "https://images.pexels.com/photos/3958400/pexels-photo-3958400.jpeg"
   },
   {
     title: "Terapia de Pareja",

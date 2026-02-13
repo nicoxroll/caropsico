@@ -79,12 +79,12 @@ const Hero: React.FC = () => {
           >
              <div className="relative z-10 mx-auto w-72 h-96 md:w-96 md:h-[500px] rounded-t-[10rem] rounded-b-[3rem] overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="/og-image.jpg" 
+                  src="https://images.pexels.com/photos/7034597/pexels-photo-7034597.jpeg" 
                   alt="Carolina Crespo Psicóloga" 
                   width="800"
                   height="1000"
-                  fetchPriority="high"
-                  className="w-full h-full object-cover"
+                  fetchpriority="high"
+                  className="w-full h-full object-cover object-[80%_center]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
              </div>
