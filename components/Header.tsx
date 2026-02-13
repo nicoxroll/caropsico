@@ -7,7 +7,6 @@ const navItems: NavItem[] = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Sobre Mí', href: '#sobre-mi' },
   { label: 'Terapia Breve', href: '#metodologia' },
-  { label: 'Servicios', href: '#servicios' },
   { label: 'Contacto', href: '#contacto' },
 ];
 

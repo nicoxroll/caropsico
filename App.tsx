@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Methodology from './components/Methodology';
-import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Timeline from './components/Timeline';
@@ -23,7 +22,6 @@ function App() {
         <About />
         <Timeline />
         <Methodology />
-        <Services />
         <OnlineTherapy />
         <PresencialTherapy />
         <Map />

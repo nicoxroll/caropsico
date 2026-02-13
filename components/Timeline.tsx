@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, useScroll, AnimatePresence } from 'framer-motion';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const timelineData = [
   {
@@ -29,6 +30,7 @@ const timelineData = [
 ];
 
 export default function Timeline() {
+  const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -50,24 +52,55 @@ export default function Timeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-800 mb-4">
-            Trayectoria Profesional
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto font-sans">
-             Un camino dedicado al bienestar y la formación continua.
-          </p>
+          <div 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="inline-flex flex-col items-center cursor-pointer group"
+          >
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-800 mb-4 group-hover:text-primary-700 transition-colors">
+              Trayectoria Profesional
+            </h2>
+            <div className={`p-2 rounded-full bg-white shadow-md text-primary-600 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+              <ChevronDown size={24} />
+            </div>
+            <p className="text-sm text-slate-500 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              {isOpen ? 'Ocultar' : 'Ver detalle'}
+            </p>
+          </div>
+          
+          <AnimatePresence>
+            {isOpen && (
+              <motion.p 
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="text-lg text-slate-600 max-w-2xl mx-auto font-sans mt-4"
+              >
+                 Un camino dedicado al bienestar y la formación continua.
+              </motion.p>
+            )}
+          </AnimatePresence>
         </motion.div>
 
-        <div className="relative">
-          {/* Central Line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-primary-200 via-purple-400 to-secondary-200 h-full rounded-full"></div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="relative overflow-hidden"
+            >
+              {/* Central Line */}
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-primary-200 via-purple-400 to-secondary-200 h-full rounded-full"></div>
 
-          <div className="space-y-16 md:space-y-32">
-            {timelineData.map((item, index) => (
-              <TimelineItem key={index} item={item} index={index} />
-            ))}
-          </div>
-        </div>
+              <div className="space-y-8 md:space-y-16 pb-12">
+                {timelineData.map((item, index) => (
+                  <TimelineItem key={index} item={item} index={index} />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
@@ -102,19 +135,7 @@ function TimelineItem({ item, index }: { item: any, index: number }) {
         <div className="absolute inset-0 rounded-full bg-primary-500 animate-ping opacity-20"></div>
       </div>
 
-      <div className="w-full md:w-5/12">
-         <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-video group">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-500"></div>
-            <img 
-              src={item.image} 
-              alt={item.title} 
-              loading="lazy"
-              width="600"
-              height="400"
-              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
-            />
-         </div>
-      </div>
+      <div className="w-full md:w-5/12 hidden md:block"></div>
     </motion.div>
   );
 }
