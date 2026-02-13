@@ -40,7 +40,6 @@ const Methodology: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ staggerChildren: 0.2 }}
           className="grid md:grid-cols-3 gap-8"
         >
           <motion.div variants={cardVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
