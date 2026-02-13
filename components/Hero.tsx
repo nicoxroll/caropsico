@@ -54,7 +54,9 @@ const Hero: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             >
               <a 
-                href="#contacto" 
+                href="https://wa.me/5492214091012" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-full font-bold shadow-lg shadow-primary-200 hover:shadow-xl hover:bg-primary-700 transition-all transform hover:-translate-y-1"
               >
                 Comenzar Terapia <ArrowRight size={18} />
@@ -77,7 +79,7 @@ const Hero: React.FC = () => {
           >
              <div className="relative z-10 mx-auto w-72 h-96 md:w-96 md:h-[500px] rounded-t-[10rem] rounded-b-[3rem] overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="https://picsum.photos/800/1200?grayscale" 
+                  src="https://images.pexels.com/photos/7268492/pexels-photo-7268492.jpeg" 
                   alt="Carolina Crespo Psicóloga" 
                   className="w-full h-full object-cover"
                 />

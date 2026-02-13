@@ -29,13 +29,13 @@ const About: React.FC = () => {
                <motion.div style={{ y: yCol1 }} className="space-y-4 mt-8">
                   <div className="bg-secondary-50 p-6 rounded-2xl rounded-tr-[3rem]">
                     <Award className="text-secondary-500 mb-3" size={32} />
-                    <h3 className="font-serif text-xl font-bold text-slate-800">10+ Años</h3>
-                    <p className="text-sm text-slate-600">De experiencia clínica ayudando a pacientes.</p>
+                    <h3 className="font-serif text-xl font-bold text-slate-800">Formación</h3>
+                    <p className="text-sm text-slate-600">Constante actualización académica y profesional.</p>
                   </div>
-                  <img src="https://picsum.photos/400/500" alt="Office" className="w-full h-48 object-cover rounded-2xl rounded-bl-[3rem] opacity-90 shadow-lg" />
+                  <img src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg" alt="Psicología" className="w-full h-48 object-cover rounded-2xl rounded-bl-[3rem] opacity-90 shadow-lg" />
                </motion.div>
                <motion.div style={{ y: yCol2 }} className="space-y-4">
-                  <img src="https://picsum.photos/400/501" alt="Therapy Session" className="w-full h-48 object-cover rounded-2xl rounded-tr-[3rem] opacity-90 shadow-lg" />
+                  <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg" alt="Terapia" className="w-full h-48 object-cover rounded-2xl rounded-tr-[3rem] opacity-90 shadow-lg" />
                   <div className="bg-primary-50 p-6 rounded-2xl rounded-bl-[3rem]">
                     <Heart className="text-primary-500 mb-3" size={32} />
                     <h3 className="font-serif text-xl font-bold text-slate-800">Empatía</h3>
@@ -61,9 +61,25 @@ const About: React.FC = () => {
               Creo firmemente en la capacidad de cambio de cada persona. Mi enfoque es pragmático, cálido y directo. Trabajaremos juntos para desbloquear tus recursos personales y construir una realidad más funcional y feliz.
             </p>
             
-            <div className="flex items-center gap-4 text-slate-700 font-medium">
-              <BookOpen className="text-primary-500" />
-              <span>Máster en Terapia Breve Estratégica</span>
+            <div className="flex flex-col gap-4 text-slate-700 font-medium mt-8">
+              <div className="flex items-center gap-4 group">
+                <div className="p-2 bg-primary-100 rounded-lg text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                   <BookOpen size={20} />
+                </div>
+                <span>Especialista en Terapia Breve Centrada en Soluciones</span>
+              </div>
+              <div className="flex items-center gap-4 group">
+                 <div className="p-2 bg-primary-100 rounded-lg text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                   <Heart size={20} />
+                 </div>
+                 <span>Formación en Psicodrama</span>
+              </div>
+              <div className="flex items-center gap-4 group">
+                 <div className="p-2 bg-primary-100 rounded-lg text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                   <Award size={20} />
+                 </div>
+                 <span>Terapia de Parejas</span>
+              </div>
             </div>
           </motion.div>
 

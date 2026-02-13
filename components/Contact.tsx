@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Teléfono / WhatsApp</h4>
-                  <p className="text-slate-600">+34 600 000 000</p>
+                  <p className="text-slate-600">+54 9 221 409-1012</p>
                   <p className="text-sm text-slate-500 mt-1">Lunes a Viernes, 9:00 - 20:00</p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Email</h4>
-                  <p className="text-slate-600">contacto@carolinacrespo.com</p>
+                  <p className="text-slate-600">caroyluna@live.com</p>
                 </div>
               </div>
 
@@ -71,9 +71,9 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Consulta</h4>
-                  <p className="text-slate-600">Calle de la Salud 123, 1º A</p>
-                  <p className="text-slate-600">Madrid, España</p>
-                  <p className="text-sm text-primary-600 mt-2 font-medium cursor-pointer hover:underline">Ver en Google Maps</p>
+                  <p className="text-slate-600">Calle 66 Nº 720</p>
+                  <p className="text-slate-600">La Plata, Buenos Aires</p>
+                  <a href="https://maps.google.com/?q=Calle+66+720+La+Plata" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-600 mt-2 font-medium cursor-pointer hover:underline block">Ver en Google Maps</a>
                 </div>
               </div>
             </div>
@@ -86,7 +86,23 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-full lg:w-7/12"
           >
-            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-slate-100">
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-slate-100 relative overflow-hidden">
+               {/* WhatsApp Quick Action */}
+               <div className="mb-8 p-4 bg-green-50 rounded-xl border border-green-100 flex items-center justify-between flex-wrap gap-4">
+                 <div>
+                   <h5 className="font-bold text-green-800 text-sm">¿Respuesta inmediata?</h5>
+                   <p className="text-green-600 text-xs">Escríbeme directamente por WhatsApp</p>
+                 </div>
+                 <a 
+                   href="https://wa.me/5492214091012" 
+                   target="_blank"
+                   rel="noopener noreferrer" 
+                   className="px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-bold shadow-sm hover:bg-green-600 transition-colors flex items-center gap-2"
+                 >
+                   <Phone size={16} /> Enviar mensaje
+                 </a>
+               </div>
+
               {formStatus === 'sent' ? (
                 <div className="h-full flex flex-col items-center justify-center text-center py-20">
                   <motion.div 

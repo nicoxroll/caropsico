@@ -1,10 +1,16 @@
 import React from 'react';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { BlobPink, BlobPurple } from './Decorations';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-br from-white via-primary-50 to-secondary-50 pt-16 pb-8 border-t border-primary-100/50">
-      <div className="container mx-auto px-6">
+    <footer className="bg-gradient-to-br from-white via-primary-50 to-secondary-50 pt-16 pb-8 border-t border-primary-100/50 relative overflow-hidden">
+      
+      {/* Subtle Blobs */}
+      <BlobPink className="w-64 h-64 -top-20 -left-20 opacity-20 blob-shape" />
+      <BlobPurple className="w-64 h-64 -bottom-20 -right-20 opacity-20 blob-shape animation-delay-2000" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
           <div className="text-center md:text-left">
             <h2 className="text-3xl font-serif font-bold mb-2 text-slate-800">
