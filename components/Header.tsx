@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NavItem } from '../types';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems: NavItem[] = [
   { label: 'Inicio', href: '#inicio' },
@@ -71,29 +72,39 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-6 px-6 flex flex-col space-y-4 border-t border-slate-100">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-slate-700 hover:text-primary-600 font-medium text-lg block border-b border-slate-50 pb-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
-          <a 
-            href="https://wa.me/5492214091012"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-center w-full py-3 bg-primary-600 text-white rounded-lg font-bold shadow hover:bg-primary-700 transition-colors"
-            onClick={() => setIsMobileMenuOpen(false)}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg overflow-hidden border-t border-slate-100"
           >
-            Agendar Cita
-          </a>
-        </div>
-      )}
+            <div className="flex flex-col space-y-4 p-6">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-slate-700 hover:text-primary-600 font-medium text-lg block border-b border-slate-50 pb-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+              <a 
+                href="https://wa.me/5492214091012"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center w-full py-3 bg-primary-600 text-white rounded-lg font-bold shadow hover:bg-primary-700 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Agendar Cita
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

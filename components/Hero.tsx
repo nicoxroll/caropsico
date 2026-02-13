@@ -12,12 +12,12 @@ const Hero: React.FC = () => {
   const imageY = useTransform(scrollY, [0, 800], [0, 100]);
 
   return (
-    <section id="inicio" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-br from-white via-primary-50/30 to-white">
+    <section id="inicio" className="relative pt-24 pb-16 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-br from-white via-primary-50/30 to-white w-full">
       {/* Abstract Background Shapes with Parallax */}
-      <BlobPink style={{ y: blob1Y }} className="w-96 h-96 -top-20 -right-20 md:w-[600px] md:h-[600px] md:-top-32 md:-right-32 blob-shape" />
-      <BlobPurple style={{ y: blob2Y }} className="w-64 h-64 top-40 -left-20 md:w-[500px] md:h-[500px] md:top-20 md:-left-32 animation-delay-2000 blob-shape" />
+      <BlobPink style={{ y: blob1Y }} className="absolute w-96 h-96 -top-20 -right-20 md:w-[600px] md:h-[600px] md:-top-32 md:-right-32 blob-shape pointer-events-none" />
+      <BlobPurple style={{ y: blob2Y }} className="absolute w-64 h-64 top-40 -left-20 md:w-[500px] md:h-[500px] md:top-20 md:-left-32 animation-delay-2000 blob-shape pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 w-full max-w-full overflow-hidden md:overflow-visible">
         <div className="flex flex-col md:flex-row items-center gap-12">
           
           <motion.div 
@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
              </div>
              
              {/* Decorative element behind image */}
-             <div className="absolute top-10 right-10 md:right-20 w-72 h-96 md:w-96 md:h-[500px] rounded-t-[10rem] rounded-b-[3rem] border-2 border-primary-200 -z-10 transform translate-x-4 translate-y-4"></div>
+             <div className="absolute top-10 right-10 md:right-20 w-72 h-96 md:w-96 md:h-[500px] rounded-t-[10rem] rounded-b-[3rem] border-2 border-primary-200 -z-10 transform translate-x-4 translate-y-4 hidden md:block"></div>
           </motion.div>
           
         </div>

@@ -53,7 +53,7 @@ const itemVariants = {
 
 const Services: React.FC = () => {
   return (
-    <section id="servicios" className="py-24 bg-white">
+    <section id="servicios" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
