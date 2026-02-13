@@ -54,7 +54,11 @@ const Methodology: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="grid md:grid-cols-3 gap-8"
         >
-          <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <motion.div 
+            variants={itemVariants} 
+            whileHover={{ y: -5 }}
+            className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl transition-shadow duration-300"
+          >
             <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 mb-6">
               <Clock size={28} />
             </div>
@@ -64,7 +68,11 @@ const Methodology: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative top-0 md:-top-8">
+          <motion.div 
+            variants={itemVariants} 
+            whileHover={{ y: -5 }}
+            className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl transition-shadow duration-300 relative top-0 md:-top-8"
+          >
             <div className="w-14 h-14 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 mb-6">
               <Target size={28} />
             </div>
@@ -74,7 +82,11 @@ const Methodology: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <motion.div 
+            variants={itemVariants} 
+            whileHover={{ y: -5 }}
+            className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl transition-shadow duration-300"
+          >
             <div className="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 mb-6">
               <Lightbulb size={28} />
             </div>
