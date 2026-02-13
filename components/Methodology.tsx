@@ -3,9 +3,20 @@ import { BlobPurple } from './Decorations';
 import { Clock, Target, Lightbulb } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { 
+    opacity: 1,
+    transition: { 
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
 const Methodology: React.FC = () => {
@@ -37,12 +48,13 @@ const Methodology: React.FC = () => {
         </motion.div>
 
         <motion.div 
+          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           className="grid md:grid-cols-3 gap-8"
         >
-          <motion.div variants={cardVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 mb-6">
               <Clock size={28} />
             </div>
@@ -52,7 +64,7 @@ const Methodology: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div variants={cardVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative top-0 md:-top-8">
+          <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative top-0 md:-top-8">
             <div className="w-14 h-14 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 mb-6">
               <Target size={28} />
             </div>
@@ -62,7 +74,7 @@ const Methodology: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div variants={cardVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <motion.div variants={itemVariants} className="bg-white p-8 rounded-3xl shadow-sm border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 mb-6">
               <Lightbulb size={28} />
             </div>
