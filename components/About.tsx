@@ -23,7 +23,7 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-            className="w-full lg:w-7/12 order-2 lg:order-1 relative"
+            className="w-full lg:w-1/2 order-2 lg:order-1 relative"
           >
              <div className="grid grid-cols-2 gap-4">
                <motion.div style={{ y: yCol1 }} className="space-y-4 mt-8">
@@ -38,7 +38,7 @@ const About: React.FC = () => {
                     loading="lazy"
                     width="400"
                     height="300"
-                    className="w-full h-80 object-cover rounded-2xl rounded-bl-[3rem] opacity-90 shadow-lg translate-x-12" 
+                    className="w-full h-48 object-cover rounded-2xl rounded-bl-[3rem] opacity-90 shadow-lg" 
                   />
                </motion.div>
                <motion.div style={{ y: yCol2 }} className="space-y-4">
@@ -48,7 +48,7 @@ const About: React.FC = () => {
                     loading="lazy"
                     width="400"
                     height="300"
-                    className="w-full h-80 object-cover rounded-2xl rounded-tr-[3rem] opacity-90 shadow-lg" 
+                    className="w-full h-48 object-cover rounded-2xl rounded-tr-[3rem] opacity-90 shadow-lg" 
                   />
                   <div className="bg-primary-50 p-6 rounded-2xl rounded-bl-[3rem]">
                     <Heart className="text-primary-500 mb-3" size={32} />
@@ -64,7 +64,7 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full lg:w-5/12 order-1 lg:order-2"
+            className="w-full lg:w-1/2 order-1 lg:order-2"
           >
             <h2 className="text-sm font-bold text-primary-600 uppercase tracking-widest mb-2">Sobre Mí</h2>
             <h3 className="text-4xl font-serif text-slate-800 mb-6">Hola, soy Carolina Crespo</h3>
