@@ -18,7 +18,10 @@ export default function OnlineTherapy() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
                 src="https://images.pexels.com/photos/6893332/pexels-photo-6893332.jpeg" 
-                alt="Consulta Online" 
+                alt="Sesión de terapia online por videollamada" 
+                loading="lazy"
+                width="800"
+                height="600"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>

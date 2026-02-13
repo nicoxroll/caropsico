@@ -32,10 +32,24 @@ const About: React.FC = () => {
                     <h3 className="font-serif text-xl font-bold text-slate-800">Formación</h3>
                     <p className="text-sm text-slate-600">Constante actualización académica y profesional.</p>
                   </div>
-                  <img src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg" alt="Psicología" className="w-full h-48 object-cover rounded-2xl rounded-bl-[3rem] opacity-90 shadow-lg" />
+                  <img 
+                    src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg" 
+                    alt="Psicología" 
+                    loading="lazy"
+                    width="400"
+                    height="300"
+                    className="w-full h-48 object-cover rounded-2xl rounded-bl-[3rem] opacity-90 shadow-lg" 
+                  />
                </motion.div>
                <motion.div style={{ y: yCol2 }} className="space-y-4">
-                  <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg" alt="Terapia" className="w-full h-48 object-cover rounded-2xl rounded-tr-[3rem] opacity-90 shadow-lg" />
+                  <img 
+                    src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg" 
+                    alt="Terapia" 
+                    loading="lazy"
+                    width="400"
+                    height="300"
+                    className="w-full h-48 object-cover rounded-2xl rounded-tr-[3rem] opacity-90 shadow-lg" 
+                  />
                   <div className="bg-primary-50 p-6 rounded-2xl rounded-bl-[3rem]">
                     <Heart className="text-primary-500 mb-3" size={32} />
                     <h3 className="font-serif text-xl font-bold text-slate-800">Empatía</h3>

@@ -17,8 +17,11 @@ export default function PresencialTherapy() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
-                src="https://images.pexels.com/photos/11542627/pexels-photo-11542627.jpeg" 
+                src="/og-image.jpg" 
                 alt="Consultorio Psicológico Presencial en La Plata" 
+                loading="lazy"
+                width="800"
+                height="600"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>

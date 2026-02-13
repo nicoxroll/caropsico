@@ -20,13 +20,13 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex gap-4">
-            <a href="#" className="w-12 h-12 rounded-full bg-white shadow-sm border border-primary-100 flex items-center justify-center text-primary-400 hover:bg-primary-500 hover:text-white hover:border-transparent hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <a href="#" aria-label="Instagram" className="w-12 h-12 rounded-full bg-white shadow-sm border border-primary-100 flex items-center justify-center text-primary-400 hover:bg-primary-500 hover:text-white hover:border-transparent hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <Instagram size={20} />
             </a>
-            <a href="#" className="w-12 h-12 rounded-full bg-white shadow-sm border border-primary-100 flex items-center justify-center text-primary-400 hover:bg-secondary-500 hover:text-white hover:border-transparent hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <a href="#" aria-label="LinkedIn" className="w-12 h-12 rounded-full bg-white shadow-sm border border-primary-100 flex items-center justify-center text-primary-400 hover:bg-secondary-500 hover:text-white hover:border-transparent hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <Linkedin size={20} />
             </a>
-            <a href="#" className="w-12 h-12 rounded-full bg-white shadow-sm border border-primary-100 flex items-center justify-center text-primary-400 hover:bg-blue-500 hover:text-white hover:border-transparent hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <a href="#" aria-label="Facebook" className="w-12 h-12 rounded-full bg-white shadow-sm border border-primary-100 flex items-center justify-center text-primary-400 hover:bg-blue-500 hover:text-white hover:border-transparent hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <Facebook size={20} />
             </a>
           </div>
