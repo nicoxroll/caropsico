@@ -15,7 +15,7 @@ import PresencialTherapy from './components/PresencialTherapy';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col font-sans selection:bg-primary-200 selection:text-primary-900 w-full">
+    <div className="min-h-screen flex flex-col font-sans selection:bg-primary-200 selection:text-primary-900 w-full overflow-x-hidden">
       <SmoothScroll />
       <Header />
       <main className="flex-grow">

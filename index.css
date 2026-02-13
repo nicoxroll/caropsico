@@ -5,12 +5,14 @@
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   overflow-x: hidden;
   position: relative;
   width: 100%;
+  max-width: 100vw;
 }
 
 .blob-shape {
