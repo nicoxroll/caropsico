@@ -65,7 +65,7 @@ export default function OnlineTherapy() {
                  Agendar por WhatsApp
                </a>
                <a 
-                 href="https://calendar.google.com" 
+                 href="https://calendar.app.google/eBzbUtZG5bbUvANz7" 
                  target="_blank"
                  rel="noopener noreferrer"
                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-xl font-bold font-display hover:bg-slate-50 transition-all hover:shadow-sm"
